@@ -73,4 +73,4 @@ AI 推導僅限第 5 節對材料是否足供統整的判斷；本場未新增�
 
 本輪核對未發現阻擋上述需求納入的衝突；未執行產品實作、模型實驗、合併或部署。後續新回答仍須以來源版本核對增量。
 
-本輪正式文件寫入 commits：。
+本輪正式文件寫入 commits：`dd5fd46e17df58c3a8b80d13d6edcc32bbb86d69`（docs/design/README.md）；`c223b4b1c0aaf2160a6df51f0a0be4938dbbf487`（docs/design/workflow.md）；`419c3e3035a686adc24a6e839b0b976757f452d9`（docs/product.md）。
