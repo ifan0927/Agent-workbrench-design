@@ -72,14 +72,17 @@
 - 本場已足以帶去統整的內容：U01–U18 已明確回答；最早期想法與無 repo prototype 留在原生 ChatGPT／外部探索，形成初期輪廓且決定進 bench 時啟動 onboarding；已有 repo 就探索既有 repo，尚無 repo 則由 bench 先建立 repo 與骨架，再接續同一套 gate。
 - 本場未完成或刻意略過：初期輪廓／骨架／成果交接的具體格式、issue／task source of truth、gate 的證據與實作形式、bench agent 是否長時間存在，以及 J01–J08 的案例表述確認。這些不再阻擋本題進入統整，且不在 01 追加新 slice。
 - 下次第一個值得問的問題：不需續問；01-project-onboarding 訪談可關閉並進入 synthesis。
-- 建議下一步：以 U01–U18、J01–J08 與 O01–O06 進行正式統整；跨題事項依既有去向處理，不再替 01 建議新的訪談 slice。
+- 建議下一步：本題已完成初次正式統整；跨題事項依既有去向處理，不再替 01 建議新的訪談 slice。
 
 `ready-for-synthesis` 表示已有足夠材料供設計使用，不表示所有答案、技術或完整摘要均已確認；仍以各條目狀態為準。
 
 ## 6. 整合追蹤
 
-尚未整合。
+已完成初次統整。來源訪談版本為 commit `7c58f5d6eb587b6c9221ba7b788063bcdd264b76`；後續若 U／J／O 條目新增或改變，仍需以增量重新核對。
 
 | 已處理的來源 commit／條目 | 正式文件與段落 | 處理方式及尚待事項 |
 | --- | --- | --- |
-| — | — | 尚未整合；由後續統整者以本次保存 commit 與實際處理條目補充 |
+| `7c58f5d6eb587b6c9221ba7b788063bcdd264b76`；U01–U02、U05–U09、U13–U18、O05–O06 | [產品範圍：專案入場與 onboarding](../../docs/product.md#專案入場與-onboarding) | 已納入正式產品邊界；以 U17–U18 為最新收斂，取代 Workbench 內無 repo 暫存 project 的探索方向。正式文件 commit `f154de22c303138daa804375b4c42e6845aafb1e` |
+| `7c58f5d6eb587b6c9221ba7b788063bcdd264b76`；U03–U12、U17–U18、O03–O04 | [配置：專案 onboarding 與維護](../../docs/design/configuration.md#專案-onboarding-與維護) | 已納入 Home／repo `AGENTS.md` 分工、bench 探索、global gate、local／CI verification、確認後寫回與手動 maintenance；證據格式、探測方式、骨架細節仍維持候選／待查。正式文件 commit `5a5cd539f6444e7c752d63e6b458f9d07a5487ab` |
+| `7c58f5d6eb587b6c9221ba7b788063bcdd264b76`；J01–J08 | 本檔第 3 節 | 行為案例仍維持 AI 整理、待確認；正式文件只採納其背後已明確確認的 U 條目，不把案例全文升格為已確認需求。 |
+| `7c58f5d6eb587b6c9221ba7b788063bcdd264b76`；O01–O02 | `09-workflow-policy`、`02-clarification`、`04-development-delivery`、[候選架構](../../docs/design/architecture.md) | 維持跨題／候選身分；issue 能力邊界與 bench agent 生命週期未在本輪採納。 |
