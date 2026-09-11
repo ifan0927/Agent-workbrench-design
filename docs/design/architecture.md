@@ -49,6 +49,16 @@ flowchart LR
 
 Checkpointer 不等於跨工作知識庫，也不保存任意外部程序。派發前保存 attempt 身分，重進時先核對既有容器／成果，避免節點重跑造成重複執行；具體邊界見[工作生命週期](workflow.md)。
 
+## Clarification 帶來的待決接縫
+
+本節為待設計事項，來源：[02-clarification](../../discuss/02-clarification/README.md) O01–O02、O07–O08。已確認行為以 [workflow 的連續性](workflow.md#clarification-的連續性)與 [configuration 的能力缺口](configuration.md#任務期間的依賴與能力缺口)為準；既有「臨時 worker」候選不能直接解讀為每輪問答後立即刪除原 session。
+
+- 需辨明 Codex session／thread、app-server 程序與 worker 容器的保存責任及成本；保留原 session 不先推定為容器無期限長駐，也不先假定重建一定能無損接續。
+- 新依賴或能力如何提供、是否需要重啟環境／session，以及如何符合正常澄清的連續性，仍須選方案。手動中斷後恢復可省略的偏好，不能直接用作任意環境重啟的例外。
+- 依賴補裝可以授權，但網路、安裝權限、配置記錄與重建方式未定；新增外部服務不預設由通用開通元件處理。
+
+上述事項限制後續技術選擇，尚不新增 runner API、永久協調角色、LangGraph nodes 或自動環境修復流程；本次統整沒有新增實驗證據。
+
 ## 收斂條件
 
 A–E 的指定切片已提供配置、外層流程與真實整合證據，依[設計入口](README.md)從使用情境與工作狀態收斂元件及契約，不再把已完成切片列為開始設計的前置條件。實驗結論與限制以[各組結果](../experiments/README.md)為準，不能推論所有候選均已選定。
