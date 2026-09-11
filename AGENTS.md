@@ -5,6 +5,7 @@
 | 問題 | 按需入口 |
 | --- | --- |
 | 正式設計方法、討論順序、決策狀態與接手 | [docs/design/README.md](docs/design/README.md) |
+| 分題短訪談、journey／harness 需求、固定回報與跨 session 統整 | [discuss/README.md](discuss/README.md)，啟動指令見 [discuss/prompts.md](discuss/prompts.md) |
 | 目的、範圍、產品限制 | [docs/product.md](docs/product.md) |
 | 元件、技術、資料與控制權 | [docs/design/architecture.md](docs/design/architecture.md) |
 | AGENTS.md、指引、skills、配置快照 | [docs/design/configuration.md](docs/design/configuration.md) |
