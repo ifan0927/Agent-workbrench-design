@@ -53,8 +53,28 @@
 
 ## 6. 整合追蹤
 
-尚未整合。
+### 2026-09-11：06 探索與驗證切片統整
+
+- 授權：使用者明確要求「可以先進行 synthesis 然後整理 07 prompt」，依 [prompts B](../prompts.md#b-帶回正式設計-session-統整) 更新受影響的正式文件與本節；未啟動 07 訪談。
+- 訪談來源 commit：[ca3f44e0498fa57e655cc1cc9b014d59e06a5d8b](https://github.com/ifan0927/Agent-workbrench-design/commit/ca3f44e0498fa57e655cc1cc9b014d59e06a5d8b)；來源 blob：`c3a0d622d5f5837cdfabd0dc678895b819102241`。
+- 第 1–5 節保留訪談當時紀錄；「待整合」「未開始 synthesis」以本節後續處理結果補充，不改寫原始回答或候選身分。
 
 | 已處理的來源 commit／條目 | 正式文件與段落 | 處理方式及尚待事項 |
 | --- | --- | --- |
-| 尚未整合 | 尚未整合 | U01–U05、J01–J02 與 O01–O06 待後續統整；按各條目身分處理。 |
+| ca3f44e；U01、O01–O02 | [configuration：共用指引的研究校準](../../docs/design/configuration.md#共用指引的研究校準) | 納入以較新 agent 研究與實務校準共用指引的設計需求，不變成每件工作必須先做 survey。O01–O02 仍是初步 AI 研究整理，未作全面最新研究或實證最佳性的承諾，也未採納來源中的機制。 |
+| ca3f44e；U02、O03 | [configuration：索引與閱讀自主性](../../docs/design/configuration.md#索引與閱讀自主性)；product 配置列引用 | 納入跨專案主動探索、不憑空假設；沿用按需閱讀，不新增全量讀取、固定探索步驟或證據門檻，也不要求證明通用解法無需研究。 |
+| ca3f44e；U03–U05、O06 | [workflow：依工作指引驗證與回報](../../docs/design/workflow.md#依工作指引驗證與回報)；configuration、product 引用 | 納入依適用指引完成驗證、未規定時由模型判斷最低必要驗證，並回報實際使用方式。僅補足未規定情況，不取代既有要求、獨立 code review 或能力／授權邊界。少數情況保留為使用者預期。 |
+| ca3f44e；J01–J02 | 同上兩個行為主要位置 | 僅以 U02–U05 的明確回答整合對應行為，不把完整案例摘要當成另經批准。 |
+| ca3f44e；O04–O05 | configuration「共用指引的研究校準」及 workflow「依工作指引驗證與回報」的未決說明 | 分層解讀維持 AI 推導，具體配置組裝／角色 context 留 08，專案索引與維護留 07，外層確保方式留 09；未將行為要求一律寫成全局 prompt 或 graph nodes。05 U14 仍是候選。 |
+
+正式文件已寫入並讀回逐字確認：
+
+- [configuration.md](../../docs/design/configuration.md)：[9eac501cad2defc9c243065c5a8002c2a9a243c9](https://github.com/ifan0927/Agent-workbrench-design/commit/9eac501cad2defc9c243065c5a8002c2a9a243c9)
+- [workflow.md](../../docs/design/workflow.md)：[16f478bf044c83bcea5981fde9c9b0022711d0db](https://github.com/ifan0927/Agent-workbrench-design/commit/16f478bf044c83bcea5981fde9c9b0022711d0db)
+- [product.md](../../docs/product.md)：[8667e46bd42a46ddc863f46c21c0ee9052e22916](https://github.com/ifan0927/Agent-workbrench-design/commit/8667e46bd42a46ddc863f46c21c0ee9052e22916)
+
+一致性核對：06 與既有按需探索、研究自主性、重要方案選擇、onboarding 能力邊界及另一個 agent code review 無衝突。指引未規定與已有要求但環境不可執行分開；後者不因 U04 而視為可降低要求。Architecture 的控制權、資料權威與 05 配置接縫無需改動，未增加元件、流程節點或保存 schema。
+
+驗證方式：比對完整文字變更、來源條目與確認身分；核對新增相對連結及段落錨點；以各寫入 commit 讀回比對預期內容。純文件變更未執行應用程式測試、模型實驗或技術能力驗證。
+
+本輪已完成 U01–U05 的明確需求整合；其餘研究整理、分層推導與配置／流程細節保留原身分。06 的已談 slice 可結束，目前無需另一個 06 slice。下一題建議聚焦 07 的專案探索與驗證入口、權威來源辨認；先沿用既有 onboarding／手動 maintenance 基準，不重做一次入場訪談。07 紀錄在本輪查詢時不存在，供下一場依模板建立，本輪未新增或修改它。
