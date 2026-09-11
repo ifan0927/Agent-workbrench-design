@@ -34,8 +34,8 @@
 | --- | --- | --- |
 | 設定專案與共用能力 | 加入專案、選用共用約定／模式／skills、預覽並固定有效配置 | 哪些準備只做一次？哪些每次工作可調整？缺少配置或發現衝突時如何呈現？ |
 | 研究或設計工作 | 提交目標、探索、必要提問、回答接續、交付報告 | 目標釐清與研究自主性、依據及接手內容已有 [workflow 基準](workflow.md#研究交付或等待回答)；成果表示與保存機制、是否需要額外 review 仍待設計；無 repo 入場沿用 product 的 onboarding 基準。 |
-| 開發或修正工作 | 固定格式 issue 任務單、開發授權與程式完成；驗證、fresh review 與有限修正仍是候選流程 | 任務交接與完成界線已有 [workflow 基準](workflow.md#issue-任務單與程式完成)；issue 欄位、成果呈現、具體驗證與修正流程仍待設計。 |
-| 取消與中斷恢復 | 使用者取消、平台重啟、認證失效或 worker 消失 | 可以繼續觀察、收取或接續的條件；未知狀態、部分成果與紀錄缺口如何呈現。 |
+| 開發或修正工作 | 固定格式 issue 任務單、開發授權與程式完成；code 需另一個 agent review，具體驗證與修正流程仍待設計 | 任務交接與完成界線已有 [workflow 基準](workflow.md#issue-任務單與程式完成)；05 補入的 [code 獨立 review 與 PR 修改交付](workflow.md#code-工作的獨立-review)沿用；issue 欄位、成果呈現、具體驗證與修正流程仍待設計。 |
+| 取消與中斷恢復 | 使用者取消、平台重啟、認證失效或 worker 消失 | 05 的 [立即終止與自動恢復](workflow.md#取消中斷與認證失效)已有分界；具體觀察、收取、防重與紀錄缺口處理仍待設計。 |
 
 每條情境先寫「使用者操作 → 系統反應 → 可見成果／接手點」，再檢查正常、等待與失敗分支。必要時用時序圖或畫面草圖澄清；詳細 API、DB schema 與畫面樣式留到行為清楚後。
 
@@ -107,8 +107,8 @@
 
 **以分題短訪談接續第 1 步「首版使用情境與 agent 工作方式」，有足夠材料就統整，再銜接第 2 步工作狀態。** 訪談／統整啟動方式見 [discuss/prompts.md](../../discuss/prompts.md)。
 
-已完成統整的 onboarding 基準見 [product.md](../product.md#專案入場與-onboarding)；02 的目標釐清與階段銜接見 [workflow](workflow.md#目標釐清與必要取捨)，索引自主性見 [configuration](configuration.md#索引與閱讀自主性)。03 的研究與設計成果方向見 [product](../product.md#研究與設計的成果方向)，是否研究、何時停止及接手內容見 [workflow](workflow.md#研究交付或等待回答)。04 的固定格式 issue 交接與程式完成界線見 [workflow](workflow.md#issue-任務單與程式完成)。不再從頭訪談這些已有答案。
+已完成統整的 onboarding 基準見 [product.md](../product.md#專案入場與-onboarding)；02 的目標釐清與階段銜接見 [workflow](workflow.md#目標釐清與必要取捨)，索引自主性見 [configuration](configuration.md#索引與閱讀自主性)。03 的研究與設計成果方向見 [product](../product.md#研究與設計的成果方向)，是否研究、何時停止及接手內容見 [workflow](workflow.md#研究交付或等待回答)。04 的固定格式 issue 交接與程式完成界線見 [workflow](workflow.md#issue-任務單與程式完成)。05 的回答接續、PR 後修改、獨立 code review、終止與恢復見 [workflow](workflow.md#必要問題的回答接續)及後續相關段落；角色初始化見 [configuration 候選](configuration.md#當次-agent-角色與配置初始化候選)。不再從頭訪談這些已有答案。
 
-下一個有價值的設計切片是 clarification 等待期間的 session／容器生命週期：依 [architecture 的待決接縫](architecture.md#clarification-帶來的待決接縫)比較保存、手動中斷與能力變更的責任及成本，再決定技術與必要驗證。此處只指定接續點，不自行啟動實作或實驗。
+下一場分題訪談可進入 06「跨專案共用指引」，以哪些好習慣值得集中維護為具體片段；不在 06 定角色／模式或 LangGraph 架構。技術設計仍需依 [clarification 接縫](architecture.md#clarification-帶來的待決接縫)及 [05 接縫](architecture.md#05-帶來的配置與恢復接縫)處理配置、保存與恢復責任，不能以舊候選忽略新確認需求。此處只指定接續點，不自行啟動實作或實驗。
 
 第一份討論產物是操作／agent 行為情境與需求分界，不先建立產品 repos 或完整 schema。訪談材料按固定結構存入 discuss；正式結論統整回既有主題。後續接手時先讀本節與指定主題，直接沿用已確認內容繼續討論。
