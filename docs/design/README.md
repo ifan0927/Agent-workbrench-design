@@ -33,7 +33,7 @@
 | 情境 | 討論起點 | 需釐清的內容 |
 | --- | --- | --- |
 | 設定專案與共用能力 | 加入專案、選用共用約定／模式／skills、預覽並固定有效配置 | 哪些準備只做一次？哪些每次工作可調整？缺少配置或發現衝突時如何呈現？ |
-| 研究或設計工作 | 提交目標、探索、必要提問、回答接續、交付報告 | Project ready 後的單次目標、必要追問、來源與報告形式、何時接手及是否需要額外 review；無 repo 入場沿用 product 的 onboarding 基準。 |
+| 研究或設計工作 | 提交目標、探索、必要提問、回答接續、交付報告 | 目標釐清與研究自主性、依據及接手內容已有 [workflow 基準](workflow.md#研究交付或等待回答)；成果表示與保存機制、是否需要額外 review 仍待設計；無 repo 入場沿用 product 的 onboarding 基準。 |
 | 開發或修正工作 | 固定需求及 repo 版本、coding、驗證、fresh review、必要修正、交付與採納 | 開始工作的最低資訊、成果呈現、修正界限、採納與下一步授權的區別。 |
 | 取消與中斷恢復 | 使用者取消、平台重啟、認證失效或 worker 消失 | 可以繼續觀察、收取或接續的條件；未知狀態、部分成果與紀錄缺口如何呈現。 |
 
@@ -107,7 +107,7 @@
 
 **以分題短訪談接續第 1 步「首版使用情境與 agent 工作方式」，有足夠材料就統整，再銜接第 2 步工作狀態。** 訪談／統整啟動方式見 [discuss/prompts.md](../../discuss/prompts.md)。
 
-已完成統整的 onboarding 基準見 [product.md](../product.md#專案入場與-onboarding)；02 的目標釐清與階段銜接見 [workflow](workflow.md#目標釐清與必要取捨)，索引自主性見 [configuration](configuration.md#索引與閱讀自主性)。不再從頭訪談這些已有答案。
+已完成統整的 onboarding 基準見 [product.md](../product.md#專案入場與-onboarding)；02 的目標釐清與階段銜接見 [workflow](workflow.md#目標釐清與必要取捨)，索引自主性見 [configuration](configuration.md#索引與閱讀自主性)。03 的研究與設計成果方向見 [product](../product.md#研究與設計的成果方向)，是否研究、何時停止及接手內容見 [workflow](workflow.md#研究交付或等待回答)。不再從頭訪談這些已有答案。
 
 下一個有價值的設計切片是 clarification 等待期間的 session／容器生命週期：依 [architecture 的待決接縫](architecture.md#clarification-帶來的待決接縫)比較保存、手動中斷與能力變更的責任及成本，再決定技術與必要驗證。此處只指定接續點，不自行啟動實作或實驗。
 

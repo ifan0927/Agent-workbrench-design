@@ -46,6 +46,12 @@ Onboarding 是跨工作類型共用的 project-level global gate，不為討論�
 
 Clarification 多輪等待時的 session 連續性與手動中斷需求見 [workflow](design/workflow.md#clarification-的連續性)。工作環境可拋棄的原則不能直接推成每輪問答都可回收原 session；保存與恢復的技術機制仍待評估。
 
+## 研究與設計的成果方向
+
+已確認基準，來源：[03-research-design](../discuss/03-research-design/README.md) U01–U04。目標已清楚時，使用者主要需要貼合該 repo 的解決方案與架構。Repo 本身性質、是否過度設計、解方成本及對現代 AI agent 的合適性，是研究的起始考量，並非封閉清單；agent 仍應依任務辨認其他相關面向。
+
+是否需要研究、何時足夠、可保留的實作待驗證事項與成果接手需求，主要維護於 [workflow](design/workflow.md#研究交付或等待回答)。成本種類與 AI agent 合適性的具體面向尚未細分，不先將它們定成固定架構、工具選型或完整評估表。
+
 ## 明確不納入
 
 - 不重啟已封存 ALC，也不承接 ALC、CodeRail 或 Multica-local 的完整 roadmap。

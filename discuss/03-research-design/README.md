@@ -68,4 +68,16 @@
 
 ## 6. 整合追蹤
 
-尚未整合。
+2026-09-11：依使用者「開始 synthesis」授權首次統整。來源 commit：`fd886f9eed15936a6a409261f8eadd0cce6d7aa5`，來源 blob：`19e36630db07fdf5656bea63ee9ad81046dcd1d6`。以下僅追蹤已處理條目；第 1–5 節保留訪談時的材料與身分，後續新增回答須另行核對。
+
+| 已處理的來源 commit／條目 | 正式文件與段落 | 處理方式及尚待事項 |
+| --- | --- | --- |
+| `fd886f9`；U01–U04／J01／O01 | [product — 研究與設計的成果方向](../../docs/product.md#研究與設計的成果方向)；[workflow — 研究交付或等待回答](../../docs/design/workflow.md#研究交付或等待回答) | 成果方向與開放考量納入 product；有用依據納入 workflow；無來源配額或固定評估表。成本種類與 AI agent 合適性細分仍保留。 |
+| `fd886f9`；U05／U07／J01／O01–O02 | [workflow — 研究交付或等待回答](../../docs/design/workflow.md#研究交付或等待回答)；[configuration — 索引與閱讀自主性](../../docs/design/configuration.md#索引與閱讀自主性) | 納入是否研究及何時停止的自主判斷；configuration 僅引用指引方向。未新增分類證明或停止關卡；重要方案採納與開發授權仍分開。 |
+| `fd886f9`；U06／J02／O02 | [workflow — 研究交付或等待回答](../../docs/design/workflow.md#研究交付或等待回答) | 納入本案例不阻擋研究進展的行為；保留未驗證身分與案例限定，未泛化全部未知或授權實作。 |
+| `fd886f9`；U08／J03／O02 | [workflow — 研究交付或等待回答](../../docs/design/workflow.md#研究交付或等待回答)、[保存與清理](../../docs/design/workflow.md#保存與清理) | 納入已探索方向、repo 已讀內容與重點結果等接手需求；未採納完整報告 schema 或要求原文全文複製。 |
+| `fd886f9`；O03–O04 | [workflow — 研究交付或等待回答](../../docs/design/workflow.md#研究交付或等待回答)；[product — 研究與設計的成果方向](../../docs/product.md#研究與設計的成果方向) | 保存／載入機制、成本種類及合適性細分維持未決；session／容器與能力接縫沿用既有候選，不以本次統整定案。 |
+| `fd886f9`；O05／第 5 節 | [設計入口 — 目前接續入口](../../docs/design/README.md#目前接續入口) | 僅補已統整材料入口；O05 仍是 AI 對材料充分性的判斷，不轉為產品功能、完整摘要確認或技術採納。 |
+
+核對 product／workflow／configuration／architecture 後，本輪沒有阻擋此切片的需求衝突。研究自主判斷屬 agent 工作內責任，與外層保存、人為採納及下一步授權分工一致，因此未新增架構元件、流程節點或實驗。下一個既有設計接續點仍為 clarification 等待期間的 session／容器生命週期；03 本 slice 暫不需補訪談。
+
