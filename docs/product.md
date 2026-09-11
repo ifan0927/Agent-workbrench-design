@@ -52,6 +52,10 @@ Clarification 多輪等待時的 session 連續性與手動中斷需求見 [work
 
 是否需要研究、何時足夠、可保留的實作待驗證事項與成果接手需求，主要維護於 [workflow](design/workflow.md#研究交付或等待回答)。成本種類與 AI agent 合適性的具體面向尚未細分，不先將它們定成固定架構、工具選型或完整評估表。
 
+## 開發的任務交接與完成界線
+
+已確認基準，來源：[04-development-delivery](../discuss/04-development-delivery/README.md) U01–U02／J01。需求／設計銜接開發時，以固定格式 issue 任務單承接；開發成果以該 issue 在程式上的完成為準。階段位置、授權及 PR 通過／合併的區分，主要維護於 [workflow：Issue 任務單與程式完成](design/workflow.md#issue-任務單與程式完成)。具體格式與交付呈現仍待設計，不把既有候選流程視為已採納。
+
 ## 明確不納入
 
 - 不重啟已封存 ALC，也不承接 ALC、CodeRail 或 Multica-local 的完整 roadmap。
