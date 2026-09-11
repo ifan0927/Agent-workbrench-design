@@ -126,4 +126,29 @@ Slice D 接續使用者授權的 05 未決片段，先談平台意外重啟造�
 
 ## 6. 整合追蹤
 
-尚未整合。
+### 2026-09-11：05 A–D 首次 synthesis
+
+- 授權：使用者明確要求「開始 synthesis 然後提供 06 prompt」，依 [prompts B](../prompts.md#b-帶回正式設計-session-統整) 更新受影響的既有正式文件與本節。
+- 訪談來源版本：[980ef21dc42c726c8674c7e22c99252d222e3231](https://github.com/ifan0927/Agent-workbrench-design/commit/980ef21dc42c726c8674c7e22c99252d222e3231)；本檔來源 blob：`47c383a1670b07e5cea0cb40946ffcc0faec4de6`。
+- 第 1–5 節保留訪談當時的紀錄與狀態；其中「尚未統整／待整合」為歷史描述，本次處理結果以本節為準。保存、統整均不將候選、AI 推導或整體 journey 自動升格為確認。
+
+| 來源條目 | 正式主要位置／引用 | 本輪處理與仍未決 |
+| --- | --- | --- |
+| U01–U04、J01、O01–O03、O06 | [workflow：必要問題的回答接續](../../docs/design/workflow.md#必要問題的回答接續)；product 引用 | 已確認回覆必要問題即接續、背景由模型整理、狀態可見即可。未將普通留言候選或模糊回答規則採納；O06 不另設「收到」需求仍是 AI 推導，不變成禁止確認訊息。J01 不視為另經整體批准。 |
+| U05–U09、U12、J02、O07、O09 | [workflow：PR 後修改與交付](../../docs/design/workflow.md#pr-後修改與交付) | U05 為訪談範圍。保留 GitHub 理想入口、平台可接受替代、回原工作偏好，以及修改驗證和 review 後更新原 PR；入口未選定，實作與維護成本待查，未建立自動監聽或實際操作授權。 |
+| U13、O08、O12 | [workflow：Code 工作的獨立 review](../../docs/design/workflow.md#code-工作的獨立-review)；product、configuration、architecture 與設計入口引用 | 所有 code 工作由另一個 agent review 為已確認要求。已核對 04 的 review 角色原為未決，05 補入要求，無衝突；未修改 04 訪談。修正輪數、交回人條件、結果格式與隔離方式仍待決。 |
+| U10–U11、O10–O11 | [workflow：工作內的探索接手](../../docs/design/workflow.md#工作內的探索接手)；architecture 引用 | 降低下一輪探索成本的目的已確認；工作共用暫存區仍是使用者候選。未指定必留內容、維護者、期限、載入或 reviewer 可見範圍，留 08／後續設計。 |
+| U14、J03、O13–O14 | [configuration：當次 agent 角色與配置初始化候選](../../docs/design/configuration.md#當次-agent-角色與配置初始化候選)；architecture 引用 | 角色初始化與工作流分工仍是候選。沿既有組裝方向細化角色屬 AI 推導；未選定整份重建全局 AGENTS.md，也未認定工作流只影響 graph。留 06／08／09 按問題接續。 |
+| U15–U16、J04、O04 | [workflow：取消、中斷與認證失效](../../docs/design/workflow.md#取消中斷與認證失效) | 已確認一般不即時改需求、完成後再修改，但提供立即終止並拋棄 run。未延伸成刪除工作或回滾外部操作；停止、清理、並行細節未決。 |
+| U17–U18、J05、O15 | [workflow：取消、中斷與認證失效](../../docs/design/workflow.md#取消中斷與認證失效)；product 與設計入口引用 | 意外中斷自動接續，無法接續時可自動從頭重跑。已更新舊概括禁止重跑的候選描述；不適用主動拋棄的 run。重試額度、恢復方式及外部副作用核對／防重仍待設計，未宣稱已驗證。 |
+| O04–O05 其餘項目 | [architecture：05 帶來的配置與恢復接縫](../../docs/design/architecture.md#05-帶來的配置與恢復接縫)；workflow 各對應節 | 其餘並行衝突、通知／UI、事件 schema、nodes、session／容器生命週期不在本次定案。未新增實驗或執行技術驗證。 |
+
+正式文件寫入與讀回確認：
+
+- [docs/product.md](../../docs/product.md)：[6fc02cce6f34fb922c7b88965c37ca8231539d56](https://github.com/ifan0927/Agent-workbrench-design/commit/6fc02cce6f34fb922c7b88965c37ca8231539d56)
+- [docs/design/workflow.md](../../docs/design/workflow.md)：[e1b78035f2713b8a6c9517e51ca4410b987d498f](https://github.com/ifan0927/Agent-workbrench-design/commit/e1b78035f2713b8a6c9517e51ca4410b987d498f)
+- [docs/design/configuration.md](../../docs/design/configuration.md)：[1722c03fa9a261ff60d415e7329b5a090f926a42](https://github.com/ifan0927/Agent-workbrench-design/commit/1722c03fa9a261ff60d415e7329b5a090f926a42)
+- [docs/design/architecture.md](../../docs/design/architecture.md)：[c04dfb3a5a396ce1e58bc07b39145feb8c28a700](https://github.com/ifan0927/Agent-workbrench-design/commit/c04dfb3a5a396ce1e58bc07b39145feb8c28a700)
+- [docs/design/README.md](../../docs/design/README.md)：[e4413ae7adeebc3c6b1a1da202926979615fa25a](https://github.com/ifan0927/Agent-workbrench-design/commit/e4413ae7adeebc3c6b1a1da202926979615fa25a)
+
+本輪完成 A–D 已確認行為與候選的分類整合，未出現阻擋此切片的產品衝突。05 目前不需另開 slice；未決事項保留，後續若出現具體矛盾再最小回訪。下一個訪談切片為 06：跨專案共用的 agent 好習慣與指引邊界；不在本輪啟動 06 訪談或寫入其紀錄。
