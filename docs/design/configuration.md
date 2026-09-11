@@ -1,6 +1,6 @@
 # 配置組裝與按需探索
 
-狀態：候選設計；集中維護與按需讀取是使用者基準。[B 組最小實驗](../../lab/B/RESULTS.md)已驗證一種注入、發現與快照方式，尚非完整平台實作。整理日期：2026-09-10。
+狀態：候選設計；集中維護、按需讀取與 project onboarding 邊界是使用者基準。[B 組最小實驗](../../lab/B/RESULTS.md)已驗證一種注入、發現與快照方式，尚非完整平台實作。整理日期：2026-09-11。
 
 平台集中維護共用內容，每輪選定並固定必要版本；專案 AGENTS.md 保留少量必要約定與文件索引，不是百科或必讀清單。Agent 根據當次問題自主搜尋與探索。
 
@@ -14,7 +14,20 @@
 | Skills | 依工作選用的可發現能力，全文由 agent 按需讀取。 |
 | 任務輸入 | 當次目標、範圍、完成條件、授權、已納入的回答與成果。 |
 
-專案索引與當次任務分開；切換模式不覆寫 repo AGENTS.md。AI 可以協助起草與分類，不需要每輪自由重寫全部規則。來源資料留原處，索引不複製全文。
+專案索引與當次任務分開；切換模式不覆寫 repo AGENTS.md。Home `AGENTS.md` 保存跨專案習慣，repo `AGENTS.md` 主要提供專案索引與特殊規則入口；原始 repo 文件仍是 authoritative source，由 agent 按當次需要讀取。AI 可以協助起草與分類，不需要每輪自由重寫全部規則。來源資料留原處，索引不複製全文。
+
+## 專案 onboarding 與維護
+
+[產品基準](../product.md#專案入場與-onboarding)要求一般 Workbench 專案工作先通過 project-level onboarding。Onboarding bench agent 的責任是探索、找出真正 blockers 並提出建議，不是成為所有後續工作的永久主管：
+
+1. 既有 repo：固定目標版本，探索文件、專案索引、特殊規則、build／test／CI 與必要 Git／tool capability。
+2. 新專案：收到使用者建立 repo 的明確授權後，先建立 repo 與符合初期輪廓的骨架，再以該 repo 接續相同探索。
+3. 依「看得到該看的、改得到該改的、驗得到該驗的」判斷 readiness，呈現少而精準的 blockers、實際證據與建議。
+4. 使用者確認後，才把穩定的 project index、repo `AGENTS.md` 入口與 local／external verification 線索寫回 repo；寫回不取代原始文件。
+5. Gate 通過前不派一般 worker。必要能力缺失時先修正並重新驗證；CI-only repo 可在 authoritative verification path 明確時通過。
+6. 後續 maintenance 沿用相同探索與「建議 → 確認 → 修改」界線，但只由使用者手動觸發，不做背景監控或週期掃描。
+
+Gate 的證據格式、能力探測、失效後重驗與初始骨架內容仍是候選設計／技術待查；issue／task 能力是否構成 blocker 留給 workflow policy 統整。Bench agent 是否長時間存在不由本節定案。
 
 ## 本輪有效配置
 
