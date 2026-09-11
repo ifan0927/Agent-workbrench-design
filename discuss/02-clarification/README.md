@@ -73,8 +73,26 @@
 
 ## 6. 整合追蹤
 
-尚未整合。
+2026-09-11 統整。來源版本：[cd557b9c2542b23980058d9844371ba43f0bf5a8](https://github.com/ifan0927/Agent-workbrench-design/commit/cd557b9c2542b23980058d9844371ba43f0bf5a8)，來源 blob：`c8bae3b8d065265237e8eb56e6fbff991311b9a4`。下表均以此來源版本為準；第 1–5 節保留訪談原貌，當中的「待整合」歷史標記以本表的逐項處理結果補充，不代表其餘未知已解決。
 
 | 已處理的來源 commit／條目 | 正式文件與段落 | 處理方式及尚待事項 |
 | --- | --- | --- |
-| 尚未整合 | 尚未整合 | 由後續統整者依實際寫入補充。 |
+| `cd557b9`；U01–U03、U06–U09、O04 | [product：單次目標釐清與階段銜接](../../docs/product.md#單次目標釐清與階段銜接)、[workflow：目標釐清與必要取捨](../../docs/design/workflow.md#目標釐清與必要取捨) | 已納入明確行為；區分 repo 閱讀與代替使用者選目標、重要方案取捨與純實作細節、設計接續與開發授權。確認 UI／操作方式仍未定。 |
+| `cd557b9`；U03–U05、O01–O02、O07 | [workflow：Clarification 的連續性](../../docs/design/workflow.md#clarification-的連續性)、[architecture：Clarification 帶來的待決接縫](../../docs/design/architecture.md#clarification-帶來的待決接縫) | 已納入原 session 原則上保留、bench 手動中斷與中斷後恢復為 nice-to-have 的需求；修正一般清理／重建候選的適用說明。保留 session 不等於已決定容器長駐；重啟環境／session 仍為候選，並非 U04 的已採納例外。 |
+| `cd557b9`；U10–U11、O03 | [configuration：索引與閱讀自主性](../../docs/design/configuration.md#索引與閱讀自主性) | 已納入第一層方向、逐層按需探索及索引非白名單；O03 不再等待固定閱讀深度或清單，不新增探索 gate。 |
+| `cd557b9`；U12、U14、O05、O08 | [configuration：任務期間的依賴與能力缺口](../../docs/design/configuration.md#任務期間的依賴與能力缺口)、[architecture：Clarification 帶來的待決接縫](../../docs/design/architecture.md#clarification-帶來的待決接縫) | 已納入可授權補裝套件／module 與環境能力受限的意圖；先提出能力需求是保守方向，服務啟用與重啟未選定。安裝授權範圍、網路／權限、配置記錄與技術難度未驗證；未概括授權外部服務。 |
+| `cd557b9`；U13、J05、O05 | [workflow：研究交付或等待回答](../../docs/design/workflow.md#研究交付或等待回答) | 已納入使用者認可的查詢效能案例：建議、未驗證假設及驗證方式可構成暫時足夠的進展。未泛化為所有高風險缺口都可略過，也不表示成果已驗證／採納。 |
+| `cd557b9`；J01–J04 | [workflow：目標釐清與必要取捨](../../docs/design/workflow.md#目標釐清與必要取捨)、[workflow：Clarification 的連續性](../../docs/design/workflow.md#clarification-的連續性) | 已核對其與 U 條目的關係；正式基準僅採用有明確 U 答覆支持的部分。J01–J04 完整案例仍為 AI 整理，未因統整或 commit 標成使用者全部確認。 |
+| `cd557b9`；O06 | [configuration：索引與閱讀自主性](../../docs/design/configuration.md#索引與閱讀自主性) | 僅整理現有三種工作入口並納入閱讀自主性；「模式是否完全只有階段差異」保留待核對，不自行取消其他模式責任、skills 或授權邊界。 |
+| `cd557b9`；U01–U14 的接手整理 | [workflow：接手內容的候選整理](../../docs/design/workflow.md#接手內容的候選整理) | 新增 AI 候選，非使用者逐欄確認：目標、已選方案、限制、假設、未知、證據與下一步授權。不是填滿欄位的 gate，也不要求需求探索結束前已有實作方案。 |
+| `cd557b9`；O01、O07–O08／接續方向 | [design README：目前接續入口](../../docs/design/README.md#目前接續入口) | 接續入口更新為 session／容器生命週期的責任與成本比較；沿用已統整 onboarding 與 clarification，未開始其他主題訪談、技術實驗或產品開發。 |
+
+本輪正式文件寫入且已讀回核對的 commits：
+
+- product：`e0d689bb0851838b868bdc7dfd920463dddd8159`
+- configuration：`17ef19dd5fc3dc9c70428a2785b185f985004339`
+- workflow：`b50ef155f2a461f8894954584eece3517c03cca5`
+- architecture：`2fc74b809623630297fb41e232bab544de28e5a0`
+- design README：`9b048b2fc7aa3475ad97e7ab91259e57393312e4`
+
+本題維持 `ready-for-synthesis` 的材料狀態；本來源版本已依上表完成本輪統整，後續增量仍須重新核對。待決事項不阻擋已確認行為落檔，卻仍會影響 session／環境的具體實作設計；沒有新增模型實驗、效能驗證或執行能力證據。
