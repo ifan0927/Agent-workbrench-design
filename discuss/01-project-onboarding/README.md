@@ -1,9 +1,9 @@
 # 01 Project Onboarding
 
 - 更新日期：2026-09-11；Asia/Taipei
-- 訪談進度：in-progress
-- 本場聚焦：既有 repo 的 onboarding 基準，以及無 repo 起點、暫存研究／prototype 與正式 onboarding 的分界
-- 摘要確認：U01–U17 為使用者在 2026-09-11 接手指令或本場問答中明確表達；J01–J07 是依這些回答整理的行為案例，案例表述仍待確認；O01–O06 保留未決、已取代、跨題或 AI 推導身分
+- 訪談進度：ready-for-synthesis
+- 本場聚焦：既有 repo 的 onboarding 基準，以及原生 ChatGPT 無 repo 探索、bench 建立 repo 骨架與正式 onboarding 的分界
+- 摘要確認：U01–U18 為使用者在 2026-09-11 接手指令或本場問答中明確表達；J01–J08 是依這些回答整理的行為案例，案例表述仍待確認；O01–O06 保留未決、已解決、已取代、跨題或 AI 推導身分
 
 ## 1. 範圍與既有基準
 
@@ -38,11 +38,12 @@
 | U14 | 無 repo 階段的研究成果可先落在按主題／想法分類的暫存空間，不因已有可保留產出就立即強迫建立 repo。 | 2026-09-11；本場探索中的明確回答；使用者以「有點像是 backlog」「資料夾分類主題或想法」描述方向 | 已由 U17 收斂適用範圍：可在原生 ChatGPT／外部探索空間成立，但 Workbench 不另承接無 repo 暫存空間 |
 | U15 | 研究中為了判斷方向所做的 prototype 可繼續留在暫存空間；「做出 prototype」本身尚不足以觸發正式 onboarding。 | 2026-09-11；本場探索中的明確回答 | 已由 U17 補充：無 repo prototype 留在原生 ChatGPT／外部探索；若要進 Workbench，必須先有 repo |
 | U16 | 模糊、可能很快放棄的最早期想法通常先在原生 ChatGPT 討論；Workbench／bench 比較適合在整體專案已有初期輪廓後介入。 | 2026-09-11；本場明確回答：「可能會在原生」「bench 上的比較像是整體專案已經有個初期輪廓」 | 明確回答；U17 進一步把 repo 設為進 bench 的必要條件 |
-| U17 | 進入 Workbench／bench 時必須已建立或指定 repo；bench entry 與 repo entry 合併為同一條清楚界線，並隨即觸發正式 project onboarding。 | 2026-09-11；本場明確回答：「直接切成進 bench 要有 repo」 | 明確回答；因此 Workbench 不需要無 repo project／暫存研究階段 |
+| U17 | 一般 Workbench／bench 專案工作以 repo 為必要身分；bench entry、repo entry 與正式 onboarding 應收在同一條清楚流程，不建立可長期工作的無 repo project。 | 2026-09-11；本場明確回答：「直接切成進 bench 要有 repo」 | 明確回答；U18 補充 onboarding 可從 bench 代建 repo 的 bootstrap 開始 |
+| U18 | 新專案尚無 repo 時，可由 bench agent 在 onboarding 流程內建立 repo 並一次產生初始骨架；建立後接續既有探索、建議、確認與 readiness gate。 | 2026-09-11；本場明確回答：「bench 建立」「可以混在 onboarding 裡面」「一次把骨架拉出來」 | 明確回答；這是 onboarding 的 bootstrap 入口，不代表無 repo 狀態可進行一般研究、開發或派 worker |
 
 ## 3. 具體 journey／行為案例
 
-下列案例由 AI 依 U01–U17 整理，用於把明確需求轉成可接手的行為描述；使用者尚未逐案確認其完整表述。
+下列案例由 AI 依 U01–U18 整理，用於把明確需求轉成可接手的行為描述；使用者尚未逐案確認其完整表述。
 
 | ID | 起點與必要背景 | 使用者操作／事件 | 預期系統與 agent 行為 | 可見成果／接手點 | 不得發生／待決 |
 | --- | --- | --- | --- | --- | --- |
@@ -51,8 +52,9 @@
 | J03 | Onboarding 探索顯示 worker 環境宣告可做 Git 工作，但實際無法自主操作 Git | 系統準備派出 coding worker | Workbench 阻止派工，明確呈現缺失能力；使用者與 bench 修正環境後重新驗證 gate | 修正前維持 onboarding 未完成；修正並證明能力後才可接續 | AI 整理、待確認；不得因工具名稱存在或 agent 自述可用就視為通過 |
 | J04 | Repo 已定義 build／test／CI，但部分驗證依賴外部服務、secrets 或正式 DB | Bench agent 判斷標準 worker 可執行的合理 local verification | 把可在 worker 環境合理執行的步驟列為 local path；把外部依賴列為 external／CI path，並指向 repo 的 authoritative verification source | 後續 worker 知道本地應跑什麼、哪些結果必須等 CI；CI-only repo 在路徑明確時可通過 onboarding | AI 整理、待確認；不得為了 gate 強迫套用 unit／integration 分類，也不得虛構本地可完成的驗證 |
 | J05 | 已 onboarding 的 repo 經過一段時間後，使用者懷疑索引或驗證線索過時 | 使用者手動觸發 maintenance | Bench agent 重新探索、比對穩定資訊，提出差異、影響與建議修改；收到確認後才更新 repo | 使用者可採納、調整或拒絕建議；確認過的穩定結果供後續任務使用 | AI 整理、待確認；不得自動背景監控、週期掃描或未經確認修改 repo |
-| J06 | 使用者只有一個尚未確定會實作的模糊想法，沒有 repo | 先在原生 ChatGPT 討論；形成初期專案輪廓並決定進 bench 時，建立或指定 repo | Workbench 不承接無 repo project；收到 repo 後立即走既有 project onboarding | 早期討論的必要背景與 repo 一起交接；onboarding 通過後才進入一般 bench 派工 | AI 整理、待確認；誰建立新 repo 及最少初始內容尚未確認 |
-| J07 | 無 repo 的早期研究需要短期 prototype 才能判斷方向 | 使用者在原生 ChatGPT／外部探索空間製作 prototype；之後決定交給 bench | Prototype 在進 bench 前不受 onboarding gate 阻擋；決定進 bench 時先建立或指定 repo，再把必要成果交接並啟動 onboarding | Repo 成為 Workbench 的專案身分與後續權威工作基準 | AI 整理、待確認；不得在無 repo 時建立 Workbench 暫存 project，也不得把原生 ChatGPT 的全部對話當作必要交接 |
+| J06 | 使用者只有一個尚未確定會實作的模糊想法，沒有 repo | 先在原生 ChatGPT 討論；形成初期專案輪廓並決定進 bench 時，啟動 onboarding | 若已有 repo，bench 直接探索；若尚無 repo，bench 僅先執行 U18 的 repo bootstrap，再接續正式 onboarding | 早期討論的必要背景與新建或既有 repo 一起交接；onboarding 通過後才進入一般 bench 派工 | AI 整理、待確認；初始骨架的具體內容由後續設計決定，不在本題預先固定 |
+| J07 | 無 repo 的早期研究需要短期 prototype 才能判斷方向 | 使用者在原生 ChatGPT／外部探索空間製作 prototype；之後決定交給 bench | Prototype 在進 bench 前不受 onboarding gate 阻擋；決定進 bench 時由 bench 建立或採用 repo，把必要成果交接後完成 onboarding | Repo 成為 Workbench 的專案身分與後續權威工作基準 | AI 整理、待確認；不得把 bootstrap 擴成可長期工作的無 repo project，也不得要求交接原生 ChatGPT 全部對話 |
+| J08 | 使用者已有初期專案輪廓、決定進 bench，但 GitHub 上尚無 repo | 使用者啟動 onboarding 並授權 bench 建立新 repo | Bench agent 建立 repo、產生與初期輪廓相符的骨架，再依既有規則探索並提出 project index／`AGENTS.md`／驗證路徑建議；需確認的 repo 修改仍遵循 U12 | Repo 與骨架建立後成為正式 project 基準；readiness gate 通過才可派一般 worker | AI 整理、待確認；不得把 repo 建立成功等同 onboarding 已通過，也不得在 gate 前派一般 worker |
 
 ## 4. 候選、未決與跨題事項
 
@@ -62,15 +64,15 @@
 | O02 | 跨題候選 | Bench agent 可能是長時間存在的協調角色，但這只是候選，不是本題確認的正式架構。 | 影響角色生命週期、狀態保存與責任邊界；帶到 `09-workflow-policy` 與 `docs/design/architecture.md`，不得由 onboarding 紀錄直接採納 |
 | O03 | AI 推導／技術待查 | U06 可形成很小的 gate 檢查面，但「看得到／改得到／驗得到」的證據格式、探測方式、失效後重驗與 UI 尚未決定。 | 可先把三句話當產品判斷邊界；具體機制由正式設計與後續實驗決定，不在本題補成 schema |
 | O04 | 跨題待整合 | Home／repo `AGENTS.md` 分工、project index 維護與按需讀取同時影響全局指引和專案上下文；本題只確認 onboarding 需要的部分。 | 統整時與 `06-global-guidance`、`07-project-context` 核對，避免在不同主題建立互相衝突的權威來源 |
-| O05 | 已解決 | 原先區分「進 bench」與「建立／指定 repo」兩個門檻；U17 已將兩者合併：沒有 repo 就不進 bench，進 bench 即觸發 onboarding。 | 統整時以 U17 為最新界線；不設計 Workbench 內的無 repo project 狀態 |
+| O05 | 已解決 | 一般 bench 工作必須有 repo；唯一的無 repo bench 入口是 onboarding 內的短暫 bootstrap，由 bench 建立 repo 與骨架後立刻接續正式 gate。 | 統整時以 U17–U18 為最新界線；不設計可長期停留或派一般 worker 的無 repo project 狀態 |
 | O06 | 已取代的探索方向 | 曾考慮以類似 backlog 的暫存空間保存無 repo 研究；U17 決定 Workbench 不承接此階段。 | 不需在本題設計其名稱、UI 或資料模型；原生 ChatGPT／外部探索如何整理不屬於 Workbench onboarding |
 
 ## 5. 本場收斂與下次接續
 
-- 本場已足以帶去統整的內容：U01–U17 已明確回答；最早期想法與無 repo prototype 留在原生 ChatGPT／外部探索，形成初期輪廓且決定進 bench 時必須先有 repo，並立即進入既有 onboarding gate。
-- 本場未完成或刻意略過：新 repo 由誰建立及需要哪些最少初始內容、早期成果交接的最低要求、issue／task source of truth、gate 的證據與實作形式、bench agent 是否長時間存在，以及 J01–J07 的案例表述確認。
-- 下次第一個值得問的問題：決定把新想法交給 bench、但 GitHub 上尚無 repo 時，由使用者先建立空／骨架 repo，或由 bench 在授權後協助建立。
-- 建議下一步：只再確認新 repo 的建立責任與最低交接；若不產生新的 blocker，即關閉 01 訪談並進入 synthesis，不再新增本題 slice。
+- 本場已足以帶去統整的內容：U01–U18 已明確回答；最早期想法與無 repo prototype 留在原生 ChatGPT／外部探索，形成初期輪廓且決定進 bench 時啟動 onboarding；已有 repo 就探索既有 repo，尚無 repo 則由 bench 先建立 repo 與骨架，再接續同一套 gate。
+- 本場未完成或刻意略過：初期輪廓／骨架／成果交接的具體格式、issue／task source of truth、gate 的證據與實作形式、bench agent 是否長時間存在，以及 J01–J08 的案例表述確認。這些不再阻擋本題進入統整，且不在 01 追加新 slice。
+- 下次第一個值得問的問題：不需續問；01-project-onboarding 訪談可關閉並進入 synthesis。
+- 建議下一步：以 U01–U18、J01–J08 與 O01–O06 進行正式統整；跨題事項依既有去向處理，不再替 01 建議新的訪談 slice。
 
 `ready-for-synthesis` 表示已有足夠材料供設計使用，不表示所有答案、技術或完整摘要均已確認；仍以各條目狀態為準。
 
