@@ -2,7 +2,7 @@
 
 狀態：使用者交接與後續討論確立的產品意圖；技術尚未定案。整理日期：2026-09-11。
 
-工作台為個人集中維護共用約定、模式、專案探索入口與選用 skills，將清楚目標交給既有 Codex harness 自主工作，減少跨專案反覆準備與人工搬運背景、成果的負擔。
+工作台為個人集中維護共用約定、模式、專案探索入口與選用 skills，協助釐清當次目標，並交給既有 Codex harness 在授權範圍內自主工作，減少跨專案反覆準備與人工搬運背景、成果的負擔。
 
 ## 產品假設
 
@@ -37,6 +37,14 @@ Onboarding 是跨工作類型共用的 project-level global gate，不為討論�
 初期輪廓、骨架與交接成果的具體格式，gate 證據 schema／探測方式，以及 issue 是否屬於 blocker 尚未定案；它們不改變上述產品邊界。
 
 成功不只看完成時間。人工準備、接手、review 與維護成本，和全部模型工作成本分開觀察；目前沒有兩者交換比例、金額上限或已量測的節省幅度。
+
+## 單次目標釐清與階段銜接
+
+已確認基準，來源：[02-clarification](../discuss/02-clarification/README.md) U01–U11。Project 已通過 onboarding 後，可以從模糊的單次目標開始；任務細節不足不代表需要重新 onboarding 或 maintenance。
+
+需求探索收斂後可接續設計討論，不必另設一次開始確認；從設計進入開發前須取得使用者確認。這不把三種工作入口改成必走的線性關卡，也不因方案已選定就自動授權開發。目標、方案取捨與純實作細節的自主界線，主要維護於 [workflow](design/workflow.md#目標釐清與必要取捨)；索引與按需閱讀規則見 [configuration](design/configuration.md#索引與閱讀自主性)。
+
+Clarification 多輪等待時的 session 連續性與手動中斷需求見 [workflow](design/workflow.md#clarification-的連續性)。工作環境可拋棄的原則不能直接推成每輪問答都可回收原 session；保存與恢復的技術機制仍待評估。
 
 ## 明確不納入
 
