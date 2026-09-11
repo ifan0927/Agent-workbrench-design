@@ -1,0 +1,28 @@
+# Host state, credentials, and local-only publication backups.
+.DS_Store
+.env
+.env.*
+auth.json
+*.pem
+*.key
+.codex/
+.agents/
+.private/
+
+# Generated environments and runtime state.
+__pycache__/
+*.py[cod]
+.venv/
+node_modules/
+.runtime/
+
+# Experiment evidence may embed source code, account metadata, or host paths.
+/lab/*/results/
+/lab/E/baseline/
+*.bundle
+*.sqlite
+*.sqlite-*
+*.db
+*.db-*
+*.jsonl
+*.log

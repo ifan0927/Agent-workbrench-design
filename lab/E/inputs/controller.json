@@ -1,0 +1,12 @@
+{
+  "actor": "experiment-fixture",
+  "answer": "阻擋 build，錯誤必須包含來源檔名或路徑，並指出 date 無效。",
+  "next_revision": 1,
+  "max_turn_starts": 10,
+  "turn_seconds": 300,
+  "max_repairs": 1,
+  "model": "gpt-6-astra",
+  "effort": "low",
+  "auth_source": "~/.codex/auth.json",
+  "auth_policy": "沿用 A 的只讀 access token 注入；不複製認證檔、不刷新、不切 API。"
+}

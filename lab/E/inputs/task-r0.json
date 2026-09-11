@@ -1,0 +1,11 @@
+{
+  "id": "news-date-validity",
+  "revision": 0,
+  "base": "506158ab49b672dc8e86604d8f1f4dca28a9b340",
+  "scope": "僅修正 src/lib/content/news.ts 的日期有效性與來源診斷，可新增聚焦測試。不可修改或削弱既有測試、package scripts、lockfile、內容或其他功能。",
+  "grammar": "只接受 ASCII YYYY-MM-DD，或 YYYY-MM-DDTHH:mm:ss[.S|.SS|.SSS](Z|±HH:mm)。年 0001–9999；月日須為有效 Gregorian 曆日；時 00–23、分秒 00–59，不接受 leap second；offset 最多 ±14:00（14 時時分鐘須 00）。不接受其他寬鬆格式、前後空白、尾綴垃圾、缺少時區。",
+  "calendar": "閏年：可被 4 整除，但百年須可被 400 整除。",
+  "output": "保留字串開頭的曆日，不轉 UTC 或本地時區；維持 {year, monthDay: MM.DD, full: YYYY.MM.DD, iso: YYYY-MM-DD}。formatNewsDate 無效時拋錯。",
+  "unresolved": "getNewsPosts 發現日期無效的文章時，要略過該文章，或阻擋 build？此項尚未決定，必須先提出問題。",
+  "phase": "這一回合只能探索、讀取相關 skill 與提出必要問題，不修改 repo。以 JSON 回傳 status=waiting、question（含兩個選項）、summary。不得自行採納預設。"
+}

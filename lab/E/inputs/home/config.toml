@@ -1,0 +1,9 @@
+model = "gpt-6-astra"
+model_reasoning_effort = "low"
+model_provider = "openai"
+web_search = "disabled"
+cli_auth_credentials_store = "ephemeral"
+check_for_update_on_startup = false
+
+[analytics]
+enabled = false
